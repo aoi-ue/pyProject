@@ -29,13 +29,13 @@ class LinkedList:
 
     def reverseList(self):
         prev = None
-        curr_node = self.head
-        next = curr_node.next
+        curr = self.head
 
-        while curr_node:
-            curr_node.next = prev
-            prev = curr_node
-            curr_node = next
+        while curr is not None:
+            next = curr.next
+            curr.next = prev
+            prev = curr
+            curr = next
             if next:
                 next = next.next
         self.head = prev
@@ -54,7 +54,7 @@ class LinkedList:
 
     def print_linked_list(self):
         if self.head is None:
-            return ""
+            return
 
         node = self.head
         while node is not None:
@@ -68,10 +68,7 @@ llist.insert_head("a")
 llist.insert_end("b")
 llist.insert_head("c")
 llist.insert_end("d")
-
-print(llist.count_elements())
-
-# print (llist.print_linked_list())
-
-# llist.reverseList()
-# print (llist.print_linked_list())
+llist.reverseList()
+llist.print_linked_list()
+llist.reverseList()
+llist.print_linked_list()
