@@ -28,6 +28,7 @@ class LinkedList:
         ref_node.next = new_node
 
     def reverseList(self):
+
         prev = None
         curr = self.head
 
@@ -59,16 +60,17 @@ class LinkedList:
         node = self.head
         while node is not None:
             print(node.val)
+            print("|")
             node = node.next
+        print("--END--")
 
 
-llist = LinkedList()
+if __name__ == "__main__":
+    llist = LinkedList()
 
-llist.insert_head("a")
-llist.insert_end("b")
-llist.insert_head("c")
-llist.insert_end("d")
-llist.reverseList()
-llist.print_linked_list()
-llist.reverseList()
-llist.print_linked_list()
+    llist.insert_head("a")
+    llist.insert_end("b")
+    llist.insert_head("c")
+    llist.insert_end("d")
+    llist.reverseList()
+    llist.print_linked_list()

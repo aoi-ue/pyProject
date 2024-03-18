@@ -11,7 +11,8 @@ class TestSingleLinkedList(unittest.TestCase):
         llist.insert_head("c")
         llist.insert_end("d")
         self.assertEqual(llist.count_elements(), 4, "count correctly")
+        llist.reverseList()
 
 
-if __name__ == "__main__":
-    unittest.main()
+# if __name__ == "__main__":
+#     unittest.main()
